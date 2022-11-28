@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 39</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+<body class="pagina">
+
+    
+    <img class="elementos" id="texto" src="../img/pagina39/texto.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="btnIniciar" src="../img/pagina39/btnIniciar.png" data-posX="388" data-posY="474" alt="">
+
+    <img class="elementos" id="pantalla1" src="../img/pagina39/pantalla1.png" data-posX="0" data-posY="0"/>
+    
+    <!-- Pregunta 1 -->
+    <img class="elementos r1 set1" data-respuesta="m1" id="r1_a" src="../img/pagina39/r1_a.png" data-posX="223" data-posY="146"/>
+    <img class="elementos r1 set1" data-respuesta="b" id="r1_b" src="../img/pagina39/r1_b.png" data-posX="221" data-posY="191"/>
+    <img class="elementos r1 set1" data-respuesta="m2" id="r1_c" src="../img/pagina39/r1_c.png" data-posX="222" data-posY="235"/>
+    <img class="elementos r1 set1" data-respuesta="m3" id="r1_d" src="../img/pagina39/r1_d.png" data-posX="221" data-posY="280"/>
+    <img class="elementos rSet1" id="paloma1" src="../img/pagina39/paloma.png" data-posX="808" data-posY="189"/>
+    <img class="elementos rSet1" id="tache1_1" src="../img/pagina39/tache.png" data-posX="808" data-posY="148"/>
+    <img class="elementos rSet1" id="tache1_2" src="../img/pagina39/tache.png" data-posX="808" data-posY="234"/>
+    <img class="elementos rSet1" id="tache1_3" src="../img/pagina39/tache.png" data-posX="808" data-posY="273"/>
+    
+    <!-- Pregunta 2 -->
+    <img class="elementos r2 set1" data-respuesta="m1" id="r2_a" src="../img/pagina39/r2_a.png" data-posX="221" data-posY="399"/>
+    <img class="elementos r2 set1" data-respuesta="m2" id="r2_b" src="../img/pagina39/r2_b.png" data-posX="221" data-posY="420"/>
+    <img class="elementos r2 set1" data-respuesta="m3" id="r2_c" src="../img/pagina39/r2_c.png" data-posX="221" data-posY="441"/>
+    <img class="elementos r2 set1" data-respuesta="b" id="r2_d" src="../img/pagina39/r2_d.png" data-posX="221" data-posY="462"/>
+    <img class="elementos rSet1" id="paloma2" src="../img/pagina39/paloma.png" data-posX="808" data-posY="459"/>
+    <img class="elementos rSet1" id="tache2_1" src="../img/pagina39/tache.png" data-posX="808" data-posY="399"/>
+    <img class="elementos rSet1" id="tache2_2" src="../img/pagina39/tache.png" data-posX="808" data-posY="419"/>
+    <img class="elementos rSet1" id="tache2_3" src="../img/pagina39/tache.png" data-posX="808" data-posY="439"/>
+
+    <img class="elementos" id="pantalla2" src="../img/pagina39/pantalla2.png" data-posX="0" data-posY="0"/>
+    
+    <!-- Pregunta 3 -->
+    <img class="elementos r3 set2" data-respuesta="m1" id="r3_a" src="../img/pagina39/r3_a.png" data-posX="221" data-posY="143"/>
+    <img class="elementos r3 set2" data-respuesta="b" id="r3_b" src="../img/pagina39/r3_b.png" data-posX="221" data-posY="182"/>
+    <img class="elementos r3 set2" data-respuesta="m2" id="r3_c" src="../img/pagina39/r3_c.png" data-posX="221" data-posY="240"/>
+    <img class="elementos r3 set2" data-respuesta="m3" id="r3_d" src="../img/pagina39/r3_d.png" data-posX="221" data-posY="273"/>
+    <img class="elementos rSet2" id="paloma3" src="../img/pagina39/paloma.png" data-posX="808" data-posY="186"/>
+    <img class="elementos rSet2" id="tache3_1" src="../img/pagina39/tache.png" data-posX="808" data-posY="145"/>
+    <img class="elementos rSet2" id="tache3_2" src="../img/pagina39/tache.png" data-posX="808" data-posY="231"/>
+    <img class="elementos rSet2" id="tache3_3" src="../img/pagina39/tache.png" data-posX="808" data-posY="270"/>
+    
+    <!-- Pregunta 4 -->
+    <img class="elementos r4 set2" data-respuesta="m1" id="r4_a" src="../img/pagina39/r4_a.png" data-posX="221" data-posY="412"/>
+    <img class="elementos r4 set2" data-respuesta="b" id="r4_b" src="../img/pagina39/r4_b.png" data-posX="221" data-posY="453"/>
+    <img class="elementos r4 set2" data-respuesta="m2" id="r4_c" src="../img/pagina39/r4_c.png" data-posX="221" data-posY="492"/>
+    <img class="elementos r4 set2" data-respuesta="m3" id="r4_d" src="../img/pagina39/r4_d.png" data-posX="221" data-posY="537"/>
+    <img class="elementos rSet2" id="paloma4" src="../img/pagina39/paloma.png" data-posX="808" data-posY="451"/>
+    <img class="elementos rSet2" id="tache4_1" src="../img/pagina39/tache.png" data-posX="808" data-posY="410"/>
+    <img class="elementos rSet2" id="tache4_2" src="../img/pagina39/tache.png" data-posX="808" data-posY="496"/>
+    <img class="elementos rSet2" id="tache4_3" src="../img/pagina39/tache.png" data-posX="808" data-posY="534"/>
+    
+    <img class="elementos" id="pantalla3" src="../img/pagina39/pantalla3.png" data-posX="0" data-posY="0"/>
+    
+    <!-- Pregunta 5 -->
+    <img class="elementos r5 set3" data-respuesta="m1" id="r5_a" src="../img/pagina39/r5_a.png" data-posX="221" data-posY="138"/>
+    <img class="elementos r5 set3" data-respuesta="m2" id="r5_b" src="../img/pagina39/r5_b.png" data-posX="221" data-posY="162"/>
+    <img class="elementos r5 set3" data-respuesta="b" id="r5_c" src="../img/pagina39/r5_c.png" data-posX="221" data-posY="187"/>
+    <img class="elementos r5 set3" data-respuesta="m3" id="r5_d" src="../img/pagina39/r5_d.png" data-posX="221" data-posY="212"/>
+    <img class="elementos rSet3" id="paloma5" src="../img/pagina39/paloma.png" data-posX="808" data-posY="186"/>
+    <img class="elementos rSet3" id="tache5_1" src="../img/pagina39/tache.png" data-posX="808" data-posY="139"/>
+    <img class="elementos rSet3" id="tache5_2" src="../img/pagina39/tache.png" data-posX="808" data-posY="161"/>
+    <img class="elementos rSet3" id="tache5_3" src="../img/pagina39/tache.png" data-posX="808" data-posY="211"/>
+    
+    <!-- Pregunta 6 -->
+    <img class="elementos r6 set3" data-respuesta="m1" id="r6_a" src="../img/pagina39/r6_a.png" data-posX="221" data-posY="361"/>
+    <img class="elementos r6 set3" data-respuesta="m2" id="r6_b" src="../img/pagina39/r6_b.png" data-posX="221" data-posY="401"/>
+    <img class="elementos r6 set3" data-respuesta="b" id="r6_c" src="../img/pagina39/r6_c.png" data-posX="221" data-posY="446"/>
+    <img class="elementos r6 set3" data-respuesta="m3" id="r6_d" src="../img/pagina39/r6_d.png" data-posX="221" data-posY="487"/>
+    <img class="elementos rSet3" id="paloma6" src="../img/pagina39/paloma.png" data-posX="808" data-posY="449"/>
+    <img class="elementos rSet3" id="tache6_1" src="../img/pagina39/tache.png" data-posX="808" data-posY="366"/>
+    <img class="elementos rSet3" id="tache6_2" src="../img/pagina39/tache.png" data-posX="808" data-posY="404"/>
+    <img class="elementos rSet3" id="tache6_3" src="../img/pagina39/tache.png" data-posX="808" data-posY="490"/>
+
+    
+    <img class="elementos" id="pantalla4" src="../img/pagina39/pantalla4.png" data-posX="0" data-posY="0"/>
+
+    <!-- Pregunta 7 -->
+    <img class="elementos r7 set4" data-respuesta="b" id="r7_a" src="../img/pagina39/r7_a.png" data-posX="221" data-posY="150"/>
+    <img class="elementos r7 set4" data-respuesta="m1" id="r7_b" src="../img/pagina39/r7_b.png" data-posX="221" data-posY="175"/>
+    <img class="elementos r7 set4" data-respuesta="m2" id="r7_c" src="../img/pagina39/r7_c.png" data-posX="221" data-posY="198"/>
+    <img class="elementos r7 set4" data-respuesta="m3" id="r7_d" src="../img/pagina39/r7_d.png" data-posX="221" data-posY="240"/>
+    <img class="elementos rSet4" id="paloma7" src="../img/pagina39/paloma.png" data-posX="808" data-posY="149"/>
+    <img class="elementos rSet4" id="tache7_1" src="../img/pagina39/tache.png" data-posX="808" data-posY="172"/>
+    <img class="elementos rSet4" id="tache7_2" src="../img/pagina39/tache.png" data-posX="808" data-posY="197"/>
+    <img class="elementos rSet4" id="tache7_3" src="../img/pagina39/tache.png" data-posX="808" data-posY="239"/>
+
+    <!-- Pregunta 8 -->
+    <img class="elementos r8 set4" data-respuesta="m1" id="r8_a" src="../img/pagina39/r8_a.png" data-posX="221" data-posY="368"/>
+    <img class="elementos r8 set4" data-respuesta="m2" id="r8_b" src="../img/pagina39/r8_b.png" data-posX="221" data-posY="394"/>
+    <img class="elementos r8 set4" data-respuesta="m3" id="r8_c" src="../img/pagina39/r8_c.png" data-posX="221" data-posY="438"/>
+    <img class="elementos r8 set4" data-respuesta="b" id="r8_d" src="../img/pagina39/r8_d.png" data-posX="221" data-posY="464"/>
+    <img class="elementos rSet4" id="paloma8" src="../img/pagina39/paloma.png" data-posX="808" data-posY="461"/>
+    <img class="elementos rSet4" id="tache8_1" src="../img/pagina39/tache.png" data-posX="808" data-posY="266"/>
+    <img class="elementos rSet4" id="tache8_2" src="../img/pagina39/tache.png" data-posX="808" data-posY="294"/>
+    <img class="elementos rSet4" id="tache8_3" src="../img/pagina39/tache.png" data-posX="808" data-posY="432"/>
+
+    <!-- Positiva -->
+    <img class="elementos" id="positiva" src="../img/pagina39/retroBuena.png" data-posX="0" data-posY="0" alt="">
+
+    <!-- Negativa -->
+    <img class="elementos" id="negativa" src="../img/pagina39/retroMala.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="btnReintentar" src="../img/pagina39/btnReintentar.png" data-posX="390" data-posY="474" alt="">
+
+
+    <p class="elementos" id="promedio"></p>
+    
+
+    <!-- Script de la página -->
+    <script>
+
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+        const texto = $('#texto');
+        const btnIniciar = $('#btnIniciar');
+        
+        const pantalla1 = $('#pantalla1');
+        const pantalla2 = $('#pantalla2');
+        const pantalla3 = $('#pantalla3');
+        const pantalla4 = $('#pantalla4');
+        
+        const r1_a = $('#r1_a');
+        const r1_b = $('#r1_b');
+        const r1_c = $('#r1_c');
+        const r1_d = $('#r1_d');
+
+        const r2_a = $('#r2_a');
+        const r2_b = $('#r2_b');
+        const r2_c = $('#r2_c');
+        const r2_d = $('#r2_d');
+        
+        const r3_a = $('#r3_a');
+        const r3_b = $('#r3_b');
+        const r3_c = $('#r3_c');
+        const r3_d = $('#r3_d');
+        
+        const r4_a = $('#r4_a');
+        const r4_b = $('#r4_b');
+        const r4_c = $('#r4_c');
+        const r4_d = $('#r4_d');
+        
+        const r5_a = $('#r5_a');
+        const r5_b = $('#r5_b');
+        const r5_c = $('#r5_c');
+        const r5_d = $('#r5_d');
+        
+        const r6_a = $('#r6_a');
+        const r6_b = $('#r6_b');
+        const r6_c = $('#r6_c');
+        const r6_d = $('#r6_d');
+        
+        const r7_a = $('#r7_a');
+        const r7_b = $('#r7_b');
+        const r7_c = $('#r7_c');
+        const r7_d = $('#r7_d');
+        
+        const r8_a = $('#r8_a');
+        const r8_b = $('#r8_b');
+        const r8_c = $('#r8_c');
+        const r8_d = $('#r8_d');
+        
+        const paloma1 = $('#paloma1');
+        const paloma2 = $('#paloma2');
+        const paloma3 = $('#paloma3');
+        const paloma4 = $('#paloma4');
+        const paloma5 = $('#paloma5');
+        const paloma6 = $('#paloma6');
+        const paloma7 = $('#paloma7');
+        const paloma8 = $('#paloma8');
+        
+        const tache1_1 = $('#tache1_1');
+        const tache1_2 = $('#tache1_2');
+        const tache1_3 = $('#tache1_3');
+
+        const tache2_1 = $('#tache2_1');
+        const tache2_2 = $('#tache2_2');
+        const tache2_3 = $('#tache2_3');
+
+        const tache3_1 = $('#tache3_1');
+        const tache3_2 = $('#tache3_2');
+        const tache3_3 = $('#tache3_3');
+
+        const tache4_1 = $('#tache4_1');
+        const tache4_2 = $('#tache4_2');
+        const tache4_3 = $('#tache4_3');
+
+        const tache5_1 = $('#tache5_1');
+        const tache5_2 = $('#tache5_2');
+        const tache5_3 = $('#tache5_3');
+
+        const tache6_1 = $('#tache6_1');
+        const tache6_2 = $('#tache6_2');
+        const tache6_3 = $('#tache6_3');
+
+        const tache7_1 = $('#tache7_1');
+        const tache7_2 = $('#tache7_2');
+        const tache7_3 = $('#tache7_3');
+
+        const tache8_1 = $('#tache8_1');
+        const tache8_2 = $('#tache8_2');
+        const tache8_3 = $('#tache8_3');
+
+        const set1 = $('.set1');
+        const set2 = $('.set2');
+        const set3 = $('.set3');
+        const set4 = $('.set4');
+
+        const r1 = $('.r1');
+        const r2 = $('.r2');
+        const r3 = $('.r3');
+        const r4 = $('.r4');
+        const r5 = $('.r5');
+        const r6 = $('.r6');
+        const r7 = $('.r7');
+        const r8 = $('.r8');
+
+        const rSet1 = $('.rSet1');
+        const rSet2 = $('.rSet2');
+        const rSet3 = $('.rSet3');
+        const rSet4 = $('.rSet4');
+
+        const positiva = $('#positiva');
+
+        const negativa = $('#negativa');
+        const btnReintentar = $('#btnReintentar');
+
+        const final = $('#final');
+        const btnReiniciar = $('#btnReiniciar');
+        const promedio = $('#promedio');
+
+        set1.css('cursor', 'pointer');
+        set2.css('cursor', 'pointer');
+        set3.css('cursor', 'pointer');
+        set4.css('cursor', 'pointer');
+
+        let aciertos = 0;
+        let contestadas = 0;
+        let setIndex = 1;
+        
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/Patria_ModelajeCastastrofico_39_1.mp3'),
+            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/audio0.mp3'),
+            new Audio('../audios/s_bien.mp3'),
+            new Audio('../audios/s_mal.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function(){
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+        });
+
+        function iniciarContenido(){
+            aplicacion.reproducirAudio(audio[0], iniciar, 1);
+            animacionEntrada(texto, 'default', 1, 1);
+        }
+
+        function iniciar() {  
+            parpadear(btnIniciar);
+        }
+
+        btnIniciar.click(function(){
+            if(btnIniciar.css('cursor') == 'pointer'){
+                dejarParpadear(btnIniciar)
+                animacionSalida(btnIniciar, 'default', 1);
+                animacionSalida(texto, 'default', 1);
+                entradaPreguntas();
+            }
+        });
+
+        function entradaPreguntas() {  
+            
+            if(setIndex == 1){
+                animacionEntrada(pantalla1, 'default', 1, 1);
+                animacionEntrada(r1, 'default', 1, 1);
+                animacionEntrada(r2, 'default', 1, 1);
+            }
+            
+            if(setIndex == 2){
+                animacionEntrada(pantalla2, 'default', 1, 1);
+                animacionEntrada(r3, 'default', 1, 1);
+                animacionEntrada(r4, 'default', 1, 1);
+            }
+            
+            if(setIndex == 3){
+                animacionEntrada(pantalla3, 'default', 1, 1);
+                animacionEntrada(r5, 'default', 1, 1);
+                animacionEntrada(r6, 'default', 1, 1);
+            }
+            
+            if(setIndex == 4){
+                animacionEntrada(pantalla4, 'default', 1, 1);
+                animacionEntrada(r7, 'default', 1, 1);
+                animacionEntrada(r8, 'default', 1, 1);
+            }
+        }
+
+        r1.each(function(){
+            $(this).click(function(){
+                if($(this).css('cursor') == 'pointer'){
+                    
+                    if($(this).data('respuesta') == 'b'){
+                        animacionEntrada(paloma1, 'default', .5);
+                        audio[3].play();
+                        aciertos++;
+                    }
+                    
+                    if($(this).data('respuesta') == 'm1'){
+                        animacionEntrada(tache1_1, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm2'){
+                        animacionEntrada(tache1_2, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm3'){
+                        animacionEntrada(tache1_3, 'default', .5);
+                        audio[4].play();
+                    }
+
+                    contestadas++;
+                    r1.css('cursor', 'default');
+                    verificar();
+                }
+            })
+        });
+
+        r2.each(function(){
+            $(this).click(function(){
+                if($(this).css('cursor') == 'pointer'){
+                    
+                    if($(this).data('respuesta') == 'b'){
+                        animacionEntrada(paloma2, 'default', .5);
+                        audio[3].play();
+                        aciertos++;
+                    }
+                    
+                    if($(this).data('respuesta') == 'm1'){
+                        animacionEntrada(tache2_1, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm2'){
+                        animacionEntrada(tache2_2, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm3'){
+                        animacionEntrada(tache2_3, 'default', .5);
+                        audio[4].play();
+                    }
+
+                    contestadas++;
+                    r2.css('cursor', 'default');
+                    verificar();
+                }
+            })
+        });
+
+        r3.each(function(){
+            $(this).click(function(){
+                if($(this).css('cursor') == 'pointer'){
+                    
+                    if($(this).data('respuesta') == 'b'){
+                        animacionEntrada(paloma3, 'default', .5);
+                        audio[3].play();
+                        aciertos++;
+                    }
+                    
+                    if($(this).data('respuesta') == 'm1'){
+                        animacionEntrada(tache3_1, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm2'){
+                        animacionEntrada(tache3_2, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm3'){
+                        animacionEntrada(tache3_3, 'default', .5);
+                        audio[4].play();
+                    }
+
+                    contestadas++;
+                    r3.css('cursor', 'default');
+                    verificar();
+                }
+            })
+        });
+
+        r4.each(function(){
+            $(this).click(function(){
+                if($(this).css('cursor') == 'pointer'){
+                    
+                    if($(this).data('respuesta') == 'b'){
+                        animacionEntrada(paloma4, 'default', .5);
+                        audio[3].play();
+                        aciertos++;
+                    }
+                    
+                    if($(this).data('respuesta') == 'm1'){
+                        animacionEntrada(tache4_1, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm2'){
+                        animacionEntrada(tache4_2, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm3'){
+                        animacionEntrada(tache4_3, 'default', .5);
+                        audio[4].play();
+                    }
+
+                    contestadas++;
+                    r4.css('cursor', 'default');
+                    verificar();
+                }
+            })
+        });
+
+        r5.each(function(){
+            $(this).click(function(){
+                if($(this).css('cursor') == 'pointer'){
+                    
+                    if($(this).data('respuesta') == 'b'){
+                        animacionEntrada(paloma5, 'default', .5);
+                        audio[3].play();
+                        aciertos++;
+                    }
+                    
+                    if($(this).data('respuesta') == 'm1'){
+                        animacionEntrada(tache5_1, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm2'){
+                        animacionEntrada(tache5_2, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm3'){
+                        animacionEntrada(tache5_3, 'default', .5);
+                        audio[4].play();
+                    }
+
+                    contestadas++;
+                    r5.css('cursor', 'default');
+                    verificar();
+                }
+            })
+        });
+
+        r6.each(function(){
+            $(this).click(function(){
+                if($(this).css('cursor') == 'pointer'){
+                    
+                    if($(this).data('respuesta') == 'b'){
+                        animacionEntrada(paloma6, 'default', .5);
+                        audio[3].play();
+                        aciertos++;
+                    }
+                    
+                    if($(this).data('respuesta') == 'm1'){
+                        animacionEntrada(tache6_1, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm2'){
+                        animacionEntrada(tache6_2, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm3'){
+                        animacionEntrada(tache6_3, 'default', .5);
+                        audio[4].play();
+                    }
+
+                    contestadas++;
+                    r6.css('cursor', 'default');
+                    verificar();
+                }
+            })
+        });
+
+        r7.each(function(){
+            $(this).click(function(){
+                if($(this).css('cursor') == 'pointer'){
+                    
+                    if($(this).data('respuesta') == 'b'){
+                        animacionEntrada(paloma7, 'default', .5);
+                        audio[3].play();
+                        aciertos++;
+                    }
+                    
+                    if($(this).data('respuesta') == 'm1'){
+                        animacionEntrada(tache7_1, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm2'){
+                        animacionEntrada(tache7_2, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm3'){
+                        animacionEntrada(tache7_3, 'default', .5);
+                        audio[4].play();
+                    }
+
+                    contestadas++;
+                    r7.css('cursor', 'default');
+                    verificar();
+                }
+            })
+        });
+
+        r8.each(function(){
+            $(this).click(function(){
+                if($(this).css('cursor') == 'pointer'){
+                    
+                    if($(this).data('respuesta') == 'b'){
+                        animacionEntrada(paloma8, 'default', .5);
+                        audio[3].play();
+                        aciertos++;
+                    }
+                    
+                    if($(this).data('respuesta') == 'm1'){
+                        animacionEntrada(tache8_1, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm2'){
+                        animacionEntrada(tache8_2, 'default', .5);
+                        audio[4].play();
+                    }
+                    
+                    if($(this).data('respuesta') == 'm3'){
+                        animacionEntrada(tache8_3, 'default', .5);
+                        audio[4].play();
+                    }
+
+                    contestadas++;
+                    r8.css('cursor', 'default');
+                    verificar();
+                }
+            })
+        });
+
+        function verificar() {  
+            if(contestadas == 2){
+                setIndex++;
+                entradaPreguntas();
+            }
+            if(contestadas == 4){
+                setIndex++;
+                entradaPreguntas();
+            }
+            if(contestadas == 6){
+                setIndex++;
+                entradaPreguntas();
+            }
+            if(contestadas == 8){
+                evaluar();
+            }
+            
+        }
+
+        function evaluar(){
+
+            const calificacion = ((aciertos * 100) / 8);
+
+            if(calificacion >= 80){
+                retroPositiva(calificacion);
+            }
+            else {
+                retroNegativa(calificacion);
+            }
+
+            aplicacion.guardarCalificacion(calificacion);
+        }
+
+        function retroPositiva(calificacion){
+            promedio.html(calificacion);
+            promedio.css({
+                'fontSize': '32px',
+                'color': 'white', 
+                'top': '316px',
+                'left': '475px'
+            });
+
+            animacionEntrada(positiva, 'default', 1, 3);
+            animacionEntrada(promedio, 'default', 1, 3);
+
+            aplicacion.terminaPantalla();
+        }
+
+        function retroNegativa(calificacion){
+            promedio.html(calificacion);
+            promedio.css({
+                'fontSize': '32px',
+                'color': 'white', 
+                'top': '257px',
+                'left': '470px'
+            });
+            animacionEntrada(negativa, 'default', 1, 3);
+            animacionEntrada(promedio, 'default', 1, 3);
+            setTimeout(()=>{
+                parpadear(btnReintentar);
+            }, 6000);
+        }
+
+        btnReintentar.click(function(){
+            aplicacion.recargarPagina();
+        });
+
+        function retroFinal(calificacion){
+            promedio.html(calificacion);
+            promedio.css({
+                'fontSize': '32px',
+                'color': 'white', 
+                'top': '248px',
+                'left': '603px'
+            });
+            animacionEntrada(final, 'default', 1, 5);
+            animacionEntrada(promedio, 'default', 1, 5);
+            setTimeout(()=>{
+                parpadear(btnReiniciar);
+            }, 6000);
+        }
+
+        btnReiniciar.click(function(){
+            aplicacion.reiniciarIntentos();
+            aplicacion.irPagina(1);
+        });
+
+    </script>
+</body>
+</html>

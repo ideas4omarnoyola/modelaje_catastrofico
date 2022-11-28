@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 23</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+<body class="pagina">
+    <img class="elementos" id="texto" src="../img/pagina23/texto.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="d1" src="../img/pagina23/d1.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="d2" src="../img/pagina23/d2.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="d3" src="../img/pagina23/d3.png" data-posX="0" data-posY="0" alt="">
+
+    <!-- Script de la página -->
+    <script>
+
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+
+        const texto = $('#texto');
+        const d1 = $('#d1');
+        const d2 = $('#d2');
+        const d3 = $('#d3');
+
+        const dialogos = [d1, d2, d3];
+
+        let indexAudio = 0;
+
+        // Audios------------------------------------------------------
+        
+        const audioDialogos = [
+            new Audio('../audios/Patria_ModelajeCastastrofico_23_1.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_23_2.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_23_3.mp3'),
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function(){
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+        });
+
+        function iniciarContenido(){
+            animacionEntrada(texto, 'default', 1, 1);
+            locutarTexto();
+        }
+
+        function locutarTexto(){
+            aplicacion.reproducirAudio(audioDialogos[indexAudio], siguienteAudio, 1);
+            animacionEntrada(dialogos[indexAudio], 'default', 1, 1);
+        }
+
+        function siguienteAudio(){
+
+            indexAudio++;
+
+            if(indexAudio < dialogos.length){
+                locutarTexto();
+            }
+            else{
+                aplicacion.terminaPantalla();
+            }
+        }
+        
+    </script>
+</body>
+</html>

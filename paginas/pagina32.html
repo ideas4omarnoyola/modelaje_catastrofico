@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 32</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <!-- Librerias -->
+    <script src="../js/librerias/jquery.min.js"></script>
+    <script src="../js/librerias/gsap.min.js"></script>
+
+    <!-- Script de animaciones -->
+    <script src="../js/animaciones.js"></script>
+    <!-- Scripts posicionar elementos -->
+    <script src="../js/redimensionarElementos.js"></script>
+    <script src="../js/posicionar.js"></script>
+
+</head>
+<body class="pagina">
+    <img class="elementos" id="texto" src="../img/pagina32/texto.png" data-posX="0" data-posY="0" alt="">
+
+    <img class="elementos" id="info1" src="../img/pagina32/info1.png" data-posX="0" data-posY="0" alt="">
+
+    <img class="elementos zonas" id="zona1" src="../img/pagina32/zona1.png" data-posX="259" data-posY="175" alt="">
+    <img class="elementos zonas" id="zona2" src="../img/pagina32/zona2.png" data-posX="319" data-posY="175" alt="">
+    <img class="elementos zonas" id="zona3" src="../img/pagina32/zona3.png" data-posX="378" data-posY="175" alt="">
+    <img class="elementos zonas" id="zona4" src="../img/pagina32/zona4.png" data-posX="454" data-posY="175" alt="">
+    <img class="elementos zonas" id="zona5" src="../img/pagina32/zona5.png" data-posX="514" data-posY="175" alt="">
+    <img class="elementos zonas" id="zona6" src="../img/pagina32/zona6.png" data-posX="572" data-posY="175" alt="">
+    <img class="elementos zonas" id="zona7" src="../img/pagina32/zona7.png" data-posX="633" data-posY="175" alt="">
+    <img class="elementos zonas" id="zona8" src="../img/pagina32/zona8.png" data-posX="693" data-posY="175" alt="">
+
+    <img class="elementos" id="pop1" src="../img/pagina32/pop1.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="pop2" src="../img/pagina32/pop2.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="pop3" src="../img/pagina32/pop3.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="pop4" src="../img/pagina32/pop4.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="pop5" src="../img/pagina32/pop5.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="pop6" src="../img/pagina32/pop6.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="pop7" src="../img/pagina32/pop7.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="pop8" src="../img/pagina32/pop8.png" data-posX="0" data-posY="0" alt="">
+
+    <img class="elementos botonCerrar" id="cerrar1" src="../img/pagina32/cerrar.png" data-posX="692" data-posY="278" alt="">
+    <img class="elementos botonCerrar" id="cerrar2" src="../img/pagina32/cerrar.png" data-posX="733" data-posY="288" alt="">
+    <img class="elementos botonCerrar" id="cerrar3" src="../img/pagina32/cerrar.png" data-posX="775" data-posY="298" alt="">
+    <img class="elementos botonCerrar" id="cerrar4" src="../img/pagina32/cerrar.png" data-posX="462" data-posY="282" alt="">
+    <img class="elementos botonCerrar" id="cerrar5" src="../img/pagina32/cerrar.png" data-posX="517" data-posY="282" alt="">
+    <img class="elementos botonCerrar" id="cerrar6" src="../img/pagina32/cerrar.png" data-posX="517" data-posY="282" alt="">
+    <img class="elementos botonCerrar" id="cerrar7" src="../img/pagina32/cerrar.png" data-posX="526" data-posY="278" alt="">
+    <img class="elementos botonCerrar" id="cerrar8" src="../img/pagina32/cerrar.png" data-posX="614" data-posY="278" alt="">
+
+    
+    <img class="elementos" id="boton" src="../img/pagina32/boton.png" data-posX="52" data-posY="136" alt="">
+    <img class="elementos" id="nota" src="../img/pagina32/nota.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos" id="cerrarN" src="../img/pagina32/cerrarN.png" data-posX="797" data-posY="121" alt="">
+
+    <!-- Script de la página -->
+    <script>
+
+        // Variable----------------------------------------------------
+        let aplicacion = parent;
+
+        const texto = $('#texto');
+        const info1 = $('#info1');
+
+        const boton = $('#boton');
+        const nota = $('#nota');
+        const cerrarN = $('#cerrarN');
+
+        const zona1 = $('#zona1');
+        const zona2 = $('#zona2');
+        const zona3 = $('#zona3');
+        const zona4 = $('#zona4');
+        const zona5 = $('#zona5');
+        const zona6 = $('#zona6');
+        const zona7 = $('#zona7');
+        const zona8 = $('#zona8');
+        const zona9 = $('#zona9');
+
+        const pop1 = $('#pop1');
+        const pop2 = $('#pop2');
+        const pop3 = $('#pop3');
+        const pop4 = $('#pop4');
+        const pop5 = $('#pop5');
+        const pop6 = $('#pop6');
+        const pop7 = $('#pop7');
+        const pop8 = $('#pop8');
+        const pop9 = $('#pop9');
+
+        const cerrar1 = $('#cerrar1');
+        const cerrar2 = $('#cerrar2');
+        const cerrar3 = $('#cerrar3');
+        const cerrar4 = $('#cerrar4');
+        const cerrar5 = $('#cerrar5');
+        const cerrar6 = $('#cerrar6');
+        const cerrar7 = $('#cerrar7');
+        const cerrar8 = $('#cerrar8');
+        const cerrar9 = $('#cerrar9');
+
+        const botonCerrar = $('.botonCerrar');
+        const zonas = $('.zonas');
+
+        const zonaActivo = [
+            zona1,
+            zona2,
+            zona3,
+            zona4,
+            zona5,
+            zona6,
+            zona7,
+            zona8
+        ];
+
+        const pops = [
+            pop1,
+            pop2,
+            pop3,
+            pop4,
+            pop5,
+            pop6,
+            pop7,
+            pop8
+        ];
+        
+        const cerrar = [
+            cerrar1,
+            cerrar2,
+            cerrar3,
+            cerrar4,
+            cerrar5,
+            cerrar6,
+            cerrar7,
+            cerrar8
+        ];
+        let indexPop = 0;
+
+        // Audios------------------------------------------------------
+        const audio = [
+            new Audio('../audios/Patria_ModelajeCastastrofico_32_1.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_32_10.mp3'),
+        ]
+
+        const audioPop = [
+            new Audio('../audios/Patria_ModelajeCastastrofico_32_2.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_32_3.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_32_4.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_32_5.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_32_6.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_32_7.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_32_8.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_32_9.mp3')
+        ]
+
+        // Al cargarse la página
+        $(window).on("load", function(){
+            redimensionarElementos();
+            aplicacion.cargando(iniciarContenido);
+        });
+
+        function iniciarContenido(){
+            aplicacion.reproducirAudio(audio[0], botonera, 1);
+            animacionEntrada(texto, 'default', 1, 1);
+            animacionEntrada(info1, 'default', 1, 1);
+        }
+
+        function botonera(){
+            parpadear(zonaActivo[indexPop]);
+        }
+
+        zonas.each(function(){
+            $(this).click(function(){
+                if($(this).css('cursor') == 'pointer'){
+                    dejarParpadear($(this));
+                    aplicacion.reproducirAudio(audioPop[indexPop], cerrarPop, 1);
+                    animacionEntrada(pops[indexPop], 'default', 1, 1);
+
+                    zonaActivo[indexPop].css('opacity', .4);
+                }
+            });
+        });
+
+        function cerrarPop(){  
+            parpadear(cerrar[indexPop]);
+        }
+
+        botonCerrar.each(function(){
+            $(this).click(function(){
+                if($(this).css('cursor') == 'pointer'){
+                    dejarParpadear($(this));                    
+                    animacionSalida(pops[indexPop], 'default', 1);
+                    animacionSalida(cerrar[indexPop], 'default', 1);
+                    animacionSalida(zonaActivo[indexPop], 'default', 1);
+                    siguiente();
+                }
+            });
+        });
+
+        function siguiente() {  
+            
+            indexPop++;
+
+            if(indexPop < pops.length){
+                botonera();
+            }
+            else{
+                parpadear(boton);
+            }
+        }
+    
+        boton.click(function(){
+            if(boton.css('cursor') == 'pointer'){
+                dejarParpadear(boton); 
+                aplicacion.reproducirAudio(audio[1], cerrarNota, 1);
+                animacionEntrada(nota, 'default', 1, 1);
+            }
+        });
+
+        function cerrarNota(){
+            parpadear(cerrarN);
+        }
+    
+        cerrarN.click(function(){
+            if(cerrarN.css('cursor') == 'pointer'){
+                dejarParpadear(cerrarN); 
+                animacionSalida(cerrarN, 'default', 1, 1);
+                animacionSalida(nota, 'default', 1, 1);
+                aplicacion.terminaPantalla();
+            }
+        });
+
+    </script>
+</body>
+</html>
