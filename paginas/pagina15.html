@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página 14</title>
+    <title>Página 15</title>
 
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/estilos.css">
@@ -23,13 +23,14 @@
 <body class="pagina">
     <img class="elementos" id="texto" src="../img/pagina15/texto.png" data-posX="0" data-posY="0" alt="">
     <img class="elementos" id="d1" src="../img/pagina15/d1.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos" id="d2" src="../img/pagina15/d2.png" data-posX="0" data-posY="0" alt="">
 
-    <img class="elementos botones" id="boton1" src="../img/pagina15/boton1.png" data-posX="161" data-posY="496" alt="">
+    <img class="elementos infos" id="info1" src="../img/pagina15/info1.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos infos" id="info2" src="../img/pagina15info2.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos infos" id="info3" src="../img/pagina15/info3.png" data-posX="0" data-posY="0" alt=""> 
 
-    <img class="elementos" id="pop1" src="../img/pagina15/pop1.png" data-posX="0" data-posY="0" alt="">
-
-    <img class="elementos botonCerrar" id="cerrar1" src="../img/pagina15/cerrar.png" data-posX="797" data-posY="121" alt="">
+    <img class="elementos botones" id="boton1" src="../img/pagina15/boton1.png" data-posX="162" data-posY="242" alt="">
+    <img class="elementos botones" id="boton2" src="../img/pagina15/boton2.png" data-posX="341" data-posY="240" alt="">
+    <img class="elementos botones" id="boton3" src="../img/pagina15/boton3.png" data-posX="519" data-posY="242" alt="">
 
     <!-- Script de la página -->
     <script>
@@ -39,35 +40,31 @@
 
         const texto = $('#texto');
         const d1 = $('#d1');
-        const d2 = $('#d2');
         const boton1 = $('#boton1');
-        const pop1 = $('#pop1');
-        const cerrar1 = $('#cerrar1');
+        const boton2 = $('#boton2');
+        const boton3 = $('#boton3');
+        const info1 = $('#info1');
+        const info2 = $('#info2');
+        const info3 = $('#info3');
 
-        const botonCerrar = $('.botonCerrar');
         const botones = $('.botones');
 
-        const dialogos = [d1, d2];
+        const informacion = [info1, info2, info3];
+        const btns = [boton1, boton2, boton3];
 
-        const botonActivo = [boton1];
-        const pops = [pop1];
-        const cerrar = [cerrar1];
-
-        let indexAudio = 0;
-        let indexPop = 0;
+        let indexInfo = 0;
+        
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Patria_ModelajeCastastrofico_15_1.mp3')
-        ]
-        
-        const audioDialogos = [
-            new Audio('../audios/Patria_ModelajeCastastrofico_15_2.mp3'),
-            new Audio('../audios/Patria_ModelajeCastastrofico_15_3.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_30_1.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_30_2.mp3'),
         ]
 
-        const audioPop = [
-            new Audio('../audios/Patria_ModelajeCastastrofico_15_4.mp3')
+        const audioBotones = [
+            new Audio('../audios/Patria_ModelajeCastastrofico_30_3.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_30_4.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_30_5.mp3'),
         ]
 
         // Al cargarse la página
@@ -77,68 +74,41 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], locutarTexto, 1);
+            aplicacion.reproducirAudio(audio[0], locutar, 1);
             animacionEntrada(texto, 'default', 1, 1);
         }
 
-        function locutarTexto(){
-            aplicacion.reproducirAudio(audioDialogos[indexAudio], siguienteAudio, 1);
-            animacionEntrada(dialogos[indexAudio], 'default', 1, 1);
-        }
-
-        function siguienteAudio(){
-
-            indexAudio++;
-
-            if(indexAudio < dialogos.length){
-                locutarTexto();
-            }
-            else{
-                botonera();
-            }
+        function locutar(){
+            aplicacion.reproducirAudio(audio[1], botonera, 1);
+            animacionEntrada(d1, 'default', 1, 1);
+            animacionEntrada(boton1, 'default', 1, 1.5);
+            animacionEntrada(boton2, 'default', 1, 2);
+            animacionEntrada(boton3, 'default', 1, 2.5);
         }
 
         function botonera(){
-            parpadear(botonActivo[indexPop]);
+            parpadear(btns[indexInfo]);
         }
 
         botones.each(function(){
-            $(this).click(function(){
+            $(this).click(function () {  
                 if($(this).css('cursor') == 'pointer'){
-                    aplicacion.reproducirAudio(audioPop[indexPop], cerrarPop, 1);
-                    animacionEntrada(pops[indexPop], 'default', 1, 1);
+                    aplicacion.reproducirAudio(audioBotones[indexInfo], siguiente, 1);
                     dejarParpadear($(this));
+                    animacionEntrada(informacion[indexInfo], 'default', 1);
                 }
             });
         });
 
-        function cerrarPop(){  
-            parpadear(cerrar[indexPop]);
-        }
-
-        botonCerrar.each(function(){
-            $(this).click(function(){
-                if($(this).css('cursor') == 'pointer'){
-                    dejarParpadear($(this));                    
-                    animacionSalida(pops[indexPop], 'default', 1, 1);
-                    animacionSalida(cerrar[indexPop], 'default', 1, 1);
-                    siguiente();
-                }
-            });
-        });
-
-        function siguiente() {  
-            
-            indexPop++;
-
-            if(indexPop < pops.length){
+        function siguiente(){
+            indexInfo++;
+            if(indexInfo < informacion.length){
                 botonera();
             }
             else{
                 aplicacion.terminaPantalla();
             }
         }
-
 
     </script>
 </body>

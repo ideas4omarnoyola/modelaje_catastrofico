@@ -23,41 +23,47 @@
 <body class="pagina">
     <img class="elementos" id="texto" src="../img/pagina13/texto.png" data-posX="0" data-posY="0" alt="">
 
-    <img class="elementos" id="cuadro1" src="../img/pagina13/cuadro1.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos" id="cuadro2" src="../img/pagina13/cuadro2.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos" id="cuadro3" src="../img/pagina13/cuadro3.png" data-posX="0" data-posY="0" alt="">
+    <img class="elementos botones" id="boton1" src="../img/pagina13/boton1.png" data-posX="137" data-posY="215" alt="">
+    <img class="elementos infos" id="info1" src="../img/pagina13/info1.png" data-posX="0" data-posY="0" alt="">
 
-    <img class="elementos" id="atras" src="../img/pagina13/atras.png" data-posX="27" data-posY="337"/>
-    <img class="elementos" id="adelante" src="../img/pagina13/adelante.png" data-posX="936" data-posY="337"/>
+    <img class="elementos botones" id="boton2" src="../img/pagina13/boton2.png" data-posX="528" data-posY="215" alt="">
+    <img class="elementos infos" id="info2" src="../img/pagina13/info2.png" data-posX="0" data-posY="0" alt="">
+
+    <img class="elementos" id="boton3" src="../img/pagina13/boton3.png" data-posX="442" data-posY="450" alt="">
+    <img class="elementos infos" id="info3" src="../img/pagina13/info3.png" data-posX="0" data-posY="0" alt="">
+
 
     <!-- Script de la página -->
     <script>
 
         // Variable----------------------------------------------------
         let aplicacion = parent;
+
         const texto = $('#texto');
-        const cuadro1 = $('#cuadro1');
-        const cuadro2 = $('#cuadro2');
-        const cuadro3 = $('#cuadro3');
+        const boton1 = $('#boton1');
+        const boton2 = $('#boton2');
+        const boton3 = $('#boton3');
+        const info1 = $('#info1');
+        const info2 = $('#info2');
+        const info3 = $('#info3');
 
-        const atras = $('#atras');
-        const adelante = $('#adelante');
+        const botones = $('.botones');
 
-        atras.css('cursor', 'pointer');
+        const informacion = [info1, info2];
+        const btns = [boton1, boton2];
 
-        const slides = [cuadro1, cuadro2, cuadro3];
-
-        let noSlide = 0;
+        let indexInfo = 0;
+        
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Patria_ModelajeCastastrofico_13_1.mp3')
+            new Audio('../audios/Patria_ModelajeCastastrofico_28_1.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_28_4.mp3'),
         ]
 
-        const audiosSlides = [
-            new Audio('../audios/Patria_ModelajeCastastrofico_13_2.mp3'),
-            new Audio('../audios/Patria_ModelajeCastastrofico_13_3.mp3'),
-            new Audio('../audios/Patria_ModelajeCastastrofico_13_4.mp3'),
+        const audioBotones = [
+            new Audio('../audios/Patria_ModelajeCastastrofico_28_2.mp3'),
+            new Audio('../audios/Patria_ModelajeCastastrofico_28_3.mp3'),
         ]
 
         // Al cargarse la página
@@ -67,54 +73,49 @@
         });
 
         function iniciarContenido(){
-            aplicacion.reproducirAudio(audio[0], carrusel, 1);
+            aplicacion.reproducirAudio(audio[0], botonera, 1);
             animacionEntrada(texto, 'default', 1, 1);
-
+            animacionEntrada(boton1, 'default', 1, 1.5);
+            animacionEntrada(boton2, 'default', 1, 2);
         }
 
-        function carrusel(){
-            aplicacion.reproducirAudio(audiosSlides[noSlide], botonAdelante, 1);
-            animacionEntrada(slides[noSlide], 'default', 1);
+        function botonera(){
+            parpadear(btns[indexInfo]);
+        }
 
-            if(noSlide > 0 & atras.css('display') == 'none'){
-                animacionEntrada(atras, 'default', 1, 1);
+        botones.each(function(){
+            $(this).click(function () {  
+                if($(this).css('cursor') == 'pointer'){
+                    aplicacion.reproducirAudio(audioBotones[indexInfo], siguiente, 1);
+                    dejarParpadear($(this));
+                    animacionSalida(btns[indexInfo], 'default', 1);
+                    animacionEntrada(informacion[indexInfo], 'default', 1);
+                }
+            });
+        });
+
+        function siguiente(){
+            indexInfo++;
+            if(indexInfo < informacion.length){
+                botonera();
+            }
+            else{
+                parpadear(boton3);
             }
         }
 
-        function botonAdelante(){
-            if(noSlide < slides.length -1){
-                parpadear(adelante);
-            }
-            if(noSlide == slides.length -1){
-                aplicacion.terminaPantalla();
-            }
-        }
-
-        adelante.click(function(){
-            if(adelante.css('cursor') == 'pointer'){
-                animacionSalida(slides[noSlide], 'default', 1);
-                aplicacion.detenerAudios();
-                dejarParpadear(adelante);
-                animacionSalida(adelante, 'default', 1);
-                noSlide++;
-                setTimeout(()=>{
-                    carrusel();
-                }, 500);
+        boton3.click(function () {  
+            if(boton3.css('cursor') == 'pointer'){
+                aplicacion.reproducirAudio(audio[1], final, 1);
+                dejarParpadear(boton3);
+                animacionSalida(boton3, 'default', 1);
+                animacionEntrada(info3, 'default', 1);
             }
         });
 
-        atras.click(function(){
-            if(noSlide > 0){
-                animacionSalida(slides[noSlide], 'default', 1);
-                aplicacion.detenerAudios();
-                noSlide--;
-                
-                setTimeout(()=>{
-                    carrusel();
-                }, 500);
-            }
-        });
-
+        function final(){
+            aplicacion.terminaPantalla();
+        }
 
     </script>
 </body>

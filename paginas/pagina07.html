@@ -21,27 +21,18 @@
 
 </head>
 <body class="pagina">
-    <img class="elementos" id="titulo" src="../img/pagina07/titulo.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos" id="fondo" src="../img/pagina07/fondo.png" data-posX="0" data-posY="0" alt="">
     <img class="elementos" id="texto" src="../img/pagina07/texto.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos" id="cuadro1" src="../img/pagina07/cuadro1.png" data-posX="0" data-posY="0" alt="">
-    <img class="elementos" id="cuadro2" src="../img/pagina07/cuadro2.png" data-posX="0" data-posY="0" alt="">
 
     <!-- Script de la página -->
     <script>
 
         // Variable----------------------------------------------------
         let aplicacion = parent;
-
-        const fondo = $('#fondo');
-        const titulo = $('#titulo');
         const texto = $('#texto');
-        const cuadro1 = $('#cuadro1');
-        const cuadro2 = $('#cuadro2');
 
         // Audios------------------------------------------------------
         const audio = [
-            new Audio('../audios/Patria_ModelajeCastastrofico_07_1.mp3')
+            new Audio('../audios/Patria_ModelajeCastastrofico_10_1.mp3')
         ]
 
         // Al cargarse la página
@@ -52,15 +43,11 @@
 
         function iniciarContenido(){
             aplicacion.reproducirAudio(audio[0], finalPagina, 1);
-            animacionEntrada(fondo, 'default', 1, 1);
-            animacionEntrada(titulo, 'default', 1, 1);
             animacionEntrada(texto, 'default', 1, 1);
 
         }
 
         function finalPagina(){
-            animacionEntrada(cuadro1, 'abajo-arriba', 1);
-            animacionEntrada(cuadro2, 'abajo-arriba', 1, .5);
             aplicacion.terminaPantalla();
         }
 
