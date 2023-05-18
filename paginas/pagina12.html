@@ -23,11 +23,11 @@
 <body class="pagina">
     <img class="elementos" id="texto" src="../img/pagina12/texto.png" data-posX="0" data-posY="0" alt="">
 
-    <img class="elementos botones" id="boton1" src="../img/pagina12/boton1.png" data-posX="147" data-posY="188" alt="">
-    <img class="elementos botones" id="boton2" src="../img/pagina12/boton2.png" data-posX="526" data-posY="188" alt="">
-    <img class="elementos botones" id="boton3" src="../img/pagina12/boton3.png" data-posX="147" data-posY="352" alt="">
+    <img class="elementos botones" data-index="0" id="boton1" src="../img/pagina12/boton1.png" data-posX="147" data-posY="188" alt="">
+    <img class="elementos botones" data-index="1" id="boton2" src="../img/pagina12/boton2.png" data-posX="526" data-posY="188" alt="">
+    <img class="elementos botones" data-index="2" id="boton3" src="../img/pagina12/boton3.png" data-posX="147" data-posY="352" alt="">
 
-    <img class="elementos" id="boton4" src="../img/pagina12/boton4.png" data-posX="526" data-posY="352" alt="">
+    <img class="elementos" id="boton4" data-index="3" src="../img/pagina12/boton4.png" data-posX="526" data-posY="352" alt="">
 
     <img class="elementos" id="pop1" src="../img/pagina12/pop1.png" data-posX="0" data-posY="0" alt="">
     <img class="elementos" id="pop2" src="../img/pagina12/pop2.png" data-posX="0" data-posY="0" alt="">
@@ -86,6 +86,7 @@
 
         let indexPop = 0;
         let noSlide = 0;
+        let botonesActivos = false;
 
         // Audios------------------------------------------------------
         const audio = [
@@ -132,9 +133,16 @@
         botones.each(function(){
             $(this).click(function(){
                 if($(this).css('cursor') == 'pointer'){
+
+                    if(botonesActivos){
+                        indexPop = $(this).data('index');
+                    }
+                    else{
+                        dejarParpadear($(this));
+                    }
+
                     aplicacion.reproducirAudio(audioPop[indexPop], cerrarPop, 1);
                     animacionEntrada(pops[indexPop], 'default', 1, 1);
-                    dejarParpadear($(this));
                 }
             });
         });
@@ -149,7 +157,10 @@
                     dejarParpadear($(this));                    
                     animacionSalida(pops[indexPop], 'default', 1, 1);
                     animacionSalida(cerrar[indexPop], 'default', 1, 1);
-                    siguiente();
+                    
+                    if(!botonesActivos){
+                        siguiente();
+                    }
                 }
             });
         });
@@ -231,6 +242,12 @@
                 animacionSalida(back, 'default', 1);
                 animacionSalida(adelante, 'default', 1);
                 animacionSalida(atras, 'default', 1);
+
+                botonesActivos = true;
+                botones.css('cursor', 'pointer');
+                boton4.css('cursor', 'pointer');
+
+                noSlide = 0;
 
                 aplicacion.terminaPantalla();
             }
